@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Complex Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 5px;
+            text-align: center;
+        }
+
+        .outer {
+            background-color: #0077c0;
+            color: white;
+            writing-mode: horizontal-tb;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+            color: white;
+            text-align: left;
+        }
+
+        .no-border {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td colspan="4" class="no-border" style="text-align:center;">
+                <strong>A more complex table-within-a table.</strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="outer" rowspan="4">Outer Table</td>
+            <td colspan="3">
+                An inner table showing a variety of headings and data items.
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <!-- Inner Table Start -->
+                <table style="width: 100%;">
+                    <tr>
+                        <th colspan="4">Inner Table</th>
+                    </tr>
+                    <tr>
+                        <th rowspan="2">CORNER</th>
+                        <th colspan="2">Head1</th>
+                        <th rowspan="2">Head3</th>
+                    </tr>
+                    <tr>
+                        <th colspan="2">Head2</th>
+                    </tr>
+                    <tr>
+                        <th>Head4</th>
+                        <th>Head5</th>
+                        <th>Head6</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td rowspan="2">A<br>B</td>
+                        <td class="yellow" rowspan="2">Two Tall</td>
+                        <td class="green">
+                            <ul>
+                                <li>Lists can be table data</li>
+                                <li>Images can be table data</li>
+                            </ul>
+                        </td>
+                        <td rowspan="2">Two Wide</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
+                                alt="HTML" width="80">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"></td>
+                        <td>
+                            No border<br>
+                            <strong>Little</strong><br>
+                            Table
+                        </td>
+                        <td>Multiple<br>line<br>item</td>
+                    </tr>
+                </table>
+                <!-- Inner Table End -->
+            </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>
